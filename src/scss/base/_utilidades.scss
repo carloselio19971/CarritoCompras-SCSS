@@ -7,3 +7,9 @@
 .bg-primario{
     background-color: v.$primario;
 }
+
+[class$="__contenedor"]{
+    max-width: 120rem;
+    margin: 0 auto;
+    width: 90%;
+}
