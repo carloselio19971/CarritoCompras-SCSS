@@ -1,0 +1,88 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.navegacion{
+    background-color: v.$primario;
+
+    &__logo{
+        padding-top: 2rem;
+        width: 20rem;
+        height: 20rem;
+        margin: 0 auto;
+
+        @include m.tablet { 
+            width: 12rem;
+            height: 12rem;
+            margin: 0;
+        }
+    }
+
+    &__menu{
+        font-size: 5rem;
+        display: flex;
+        flex-direction: row;    
+        align-items: center;
+        justify-content: center;
+
+        @include m.tablet { 
+            display: flex;
+            font-size: 1.5rem;
+            flex-direction: column;    
+        }
+    }
+
+    &__menu ul{
+        list-style: none;
+        
+    }
+
+   &__botones{
+    display: flex;
+    gap:2rem;
+    flex-direction: column;
+    align-items:  center;
+    justify-content:center;
+
+    @include m.tablet { 
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+   }
+   
+   &__icono {
+        background-color: v.$blanco;
+        width: 20rem;
+        height: 20rem;
+        display: flex;
+        justify-content: center;  
+        align-items: center;  
+
+        @include m.tablet { 
+            width: 8rem;
+            height: 8rem;
+        }
+        
+   }
+
+
+    &__icono img {
+         height: 8rem;
+        width: 8rem;
+
+        @include m.tablet { 
+            height: 4rem;
+            width: 4rem;
+        }
+   }
+    
+   &__grid{
+
+        @include m.tablet { 
+            display: grid;
+            grid-template-columns: 30% 35% 25%;
+        }
+   }
+   
+
+}
