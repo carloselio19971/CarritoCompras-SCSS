@@ -1,0 +1,82 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+.promociones{
+    margin: 10rem 0;
+
+    @include m.tablet { 
+        margin-top: 20rem;
+    }
+    &__grid{
+       display: flex;
+       flex-direction: column;
+       gap:5rem;
+    }
+
+    &__texto{
+        text-align: center;
+        padding-top: 2rem;
+        color:v.$grisTitulos;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__titulo{
+        order: 1;
+    }
+    &__beneficios{
+        
+        order: 2;
+        ul{
+            list-style: none;
+            margin-bottom: 5rem;
+            li{
+                font-size: 3rem;
+            }
+        }
+        
+    }	
+
+    &__boton{
+        order: 4;
+        button{
+            background-color: v.$verde;
+            border: none;
+            border-radius: 10px;
+            width: 40%;
+            height: 5rem;
+            color:white;
+            font-size: 1.8rem;
+            margin: 5rem 0;
+        }
+    }
+    &__imagen{
+        margin: 0 auto;
+
+        order: 3;
+    }  
+
+    &__producto1{
+        background-color:v.$verdeClaro;
+    }
+    &__producto2{
+        background-color:v.$grisClaro;
+    }
+    &__producto3{
+        background-color:v.$grisClaro;
+
+    }
+    &__precio{
+        color: v.$verde;
+        
+        font-size: 3rem;
+        font-weight: bold;
+        padding-bottom: 2rem;
+        
+    }
+
+   
+    }
+   
+
+
+
