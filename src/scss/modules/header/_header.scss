@@ -9,19 +9,14 @@
         @include m.tablet {         
             display: grid;
             grid-template-columns: repeat(5, 1fr);
-        }
-
-     
-        
+        }     
     }
-
     &__textoInicio{
 
         @include m.tablet { 
             font-size: 1.5rem;
         }
     }
-
     &__icono{
         height: 3rem;
         margin-left: 5rem;
@@ -42,8 +37,8 @@
     }
     
     &__iconoRedes{
-        justify-self: center;  /* Centrar horizontalmente */
-        align-self: center;    /* Centrar verticalmente */
+        justify-self: center;  
+        align-self: center;    
     }
 
     &__iconoRedes img{
