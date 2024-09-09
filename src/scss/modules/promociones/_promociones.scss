@@ -2,14 +2,27 @@
 @use 'base/mixins' as m;
 .promociones{
     margin: 10rem 0;
-
+   
     @include m.tablet { 
-        margin-top: 20rem;
+        margin-top: 5rem;
     }
+
+    @include m.desktop { 
+        margin-top: 7rem;
+    }
+
     &__grid{
        display: flex;
        flex-direction: column;
-       gap:5rem;
+       gap:3rem;
+      
+
+       @include m.tablet { 
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        
+       }
     }
 
     &__texto{
@@ -22,6 +35,14 @@
 
     &__titulo{
         order: 1;
+        font-size: 4rem;
+        @include m.tablet { 
+            font-size: 4rem;
+        }
+        @include m.desktop { 
+            font-size: 5rem;
+        }
+       
     }
     &__beneficios{
         
@@ -43,34 +64,85 @@
             border: none;
             border-radius: 10px;
             width: 40%;
-            height: 5rem;
+            height: 4rem;
             color:white;
             font-size: 1.8rem;
-            margin: 5rem 0;
+            margin: 2rem 0;
         }
     }
     &__imagen{
         margin: 0 auto;
-
         order: 3;
+
+        img {
+            height: 20rem;
+
+            @include m.tablet { 
+                height: 25rem;
+            }
+        }
+
+        
     }  
+
+    &__imagen--claro{
+        img {
+            height: 15rem;
+
+            @include m.tablet { 
+                height: 10rem;
+            }
+            @include m.desktop { 
+                height: 15rem;
+            }
+        }
+
+        
+    }
 
     &__producto1{
         background-color:v.$verdeClaro;
+        display: flex;
+        grid-template-columns: row;
+        align-items: center;
+        justify-content: center; 
+        @include m.tablet { 
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
     }
     &__producto2{
         background-color:v.$grisClaro;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include m.tablet { 
+            height: 50rem;
+           
+        }
+
+        @include m.desktop { 
+            height: 60rem;
+        }
     }
     &__producto3{
         background-color:v.$grisClaro;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include m.tablet { 
+            height: 50rem;
+        }
 
+        @include m.desktop { 
+            height: 60rem;
+        }
     }
     &__precio{
         color: v.$verde;
-        
         font-size: 3rem;
-        font-weight: bold;
-        padding-bottom: 2rem;
+       
         
     }
 
