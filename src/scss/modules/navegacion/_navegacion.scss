@@ -50,7 +50,7 @@
    &__botones{
     display: flex;
     gap:2rem;
-    flex-direction: column;
+    flex-direction: row;
     align-items:  center;
     justify-content:center;
 
@@ -62,12 +62,20 @@
    }
    
    &__icono {
-        background-color: v.$blanco;
+    background-color: v.$blanco;
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
+    width: 10rem;
+    height: 10rem;
+    margin-top: 5rem;
+    @include m.tablet { 
         width: 20rem;
         height: 20rem;
-        display: flex;
-        justify-content: center;  
-        align-items: center;  
+    }
+       
+      
+        
 
         @include m.tablet { 
             width: 10rem;
