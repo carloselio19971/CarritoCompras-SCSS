@@ -1,0 +1,131 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.productos{
+
+    &__titulo{
+        h2{
+            font-size: 4rem;
+            text-align: center;
+            
+        }
+
+        @include m.tablet { 
+            font: 8rem;
+        }
+    }
+
+    &__categorias{
+        ul{
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            align-items: center;
+            justify-content: space-between;
+            gap:2rem;
+            color:v.$grisTitulos;
+            font-size: 2.5rem;
+            font-weight: bold;
+
+            @include m.tablet { 
+                flex-direction: row;
+                font-size: 2rem;
+            }
+        }
+        
+        li{
+            @include m.tablet { 
+                border-right: 1px solid v.$negro;
+                font-size: 2.5rem;    
+            }
+            @include m.desktop { 
+                font-size:4rem;
+            }
+
+        }
+
+        li:first-of-type{
+            color:v.$verde;
+            border-left: none;
+            margin-right: 1rem;
+            border-bottom: 0.5rem solid v.$verde;
+            margin-right: 1rem;
+        }
+
+        li:last-of-type{
+            margin-right: 1rem;
+            border-right: none;
+            
+            
+        }
+       
+    }
+
+    &__grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap:10rem;  
+        
+    }
+
+    &__item{
+        justify-self: center;  
+        align-self: center;
+        background-color: v.$grisclarito;  
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 3rem;
+    }
+
+    &__estrellas{
+            img{
+                width: 15rem;
+                filter: invert(59%) sepia(98%) saturate(952%) hue-rotate(9deg) brightness(111%) contrast(93%);
+            }
+    }
+    
+    &__texto{
+            margin-top: -5rem;
+            text-align: center;
+        p{
+            color:v.$grisTitulos;
+            font-size: 3rem;
+            font-weight: bold;
+
+            span{
+                color:v.$verde;
+                margin: 0 auto;
+            }
+        }
+   
+    }
+
+    &__boton {
+        button{
+            background-color: v.$verde;
+            color:v.$blanco;
+            border-radius: 10px;
+            border: none;
+            height: 5rem;
+            width: 10rem;
+        }
+      
+    }
+
+    &__gridProductos{
+            @include m.tablet { 
+            display: grid;
+           grid-template-columns: repeat(2,1fr);
+           grid-template-rows:repeat(2,1fr);
+           gap:5rem
+        }
+        
+        @include m.desktop { 
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows:repeat(2,1fr);
+            gap:5rem
+        }
+    }
+}
