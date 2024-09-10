@@ -13,7 +13,7 @@
         }
 
         @include m.desktop { 
-            margin-top: -20rem;
+            margin-top: -13rem;
         }
     }
     &__grid{
@@ -72,6 +72,8 @@
             grid-column-start: 3;
             grid-column-end: 5;
         }
+
+        
     }
 
     &__contenedorBoton{

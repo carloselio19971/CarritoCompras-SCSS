@@ -4,6 +4,8 @@
 .navegacion{
     background-color: v.$primario;
     min-height: 30rem;
+    position: relative;
+ 
 
     &__logo{
         padding-top: 2rem;
@@ -109,6 +111,58 @@
     }
       
    }
-   
+   &__carrito {
+        table{
+            display: none;
+        }
+        a {
+            display: none;
+        }
+
+       
+       
+      
+   }
+   &__icono:hover{
+    .navegacion__carrito{
+        position: absolute;
+        background-color: v.$blanco;
+        width: 35rem;
+        height:35rem;
+        top: 100%;
+        left: 0;
+
+        @include m.tablet { 
+            width: 40rem;
+            height:40rem;
+            
+            top: 70%;
+             // Para que aparezca debajo del icono
+            left:45%; // Alinearlo a la derecha
+            bottom: 50%;
+        }
+           
+        @include m.desktop { 
+            width: 60rem;
+            height:60rem;
+            top: 50%;
+             // Para que aparezca debajo del icono
+            left:50%; // Alinearlo a la derecha
+            bottom: 50%;
+            background-color: v.$blanco;
+        }    
+
+            table{
+                display: flex;
+                justify-content: space-around;
+                font-size: 1.8rem;
+                gap:2rem;
+            }
+        }
+    
+        
+
+   }
+
 
 }
