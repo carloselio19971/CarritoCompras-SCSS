@@ -132,6 +132,7 @@
         top: 100%;
         left: 0;
 
+
         @include m.tablet { 
             width: 40rem;
             height:40rem;
@@ -153,10 +154,58 @@
         }    
 
             table{
+                display: grid;
+               
+                thead, tbody    {
+                    
+                    border-bottom: 1px solid v.$negro;
+                    margin-bottom: 2rem;
+                    tr{
+                        padding: 2rem;
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        
+
+                        @include m.tablet { 
+                            font-size: 2rem;
+                        }
+
+                        @include m.desktop { 
+                            font-size: 3rem;
+                        }    
+                    }
+
+
+                   
+                }
+
+                .borrar-curso{
+                    background-color: none;
+                    border: none;
+                    color:red;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+    
+                
+            }
+
+            a{
                 display: flex;
-                justify-content: space-around;
-                font-size: 1.8rem;
-                gap:2rem;
+                align-items: center;
+                justify-content: center;
+                width: 70%;
+                height: 6rem;
+                background-color: v.$blanco;
+                border: 1px solid v.$negro;
+                border-radius: 10px;
+                color:v.$negro;
+                margin: 0 auto;
+                font-size: 2.5rem;
+
             }
         }
     
