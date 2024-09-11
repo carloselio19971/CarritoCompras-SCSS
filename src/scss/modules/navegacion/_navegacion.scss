@@ -5,6 +5,25 @@
     background-color: v.$primario;
     min-height: 30rem;
     position: relative;
+
+    @include m.tablet { 
+        position: fixed;
+        top: 0; 
+        width: 100%; /* Asegura que el elemento ocupe todo el ancho de la ventana */
+        z-index: 1000; /* Asegura que esté por encima de otros elementos */
+        left: 0; /* Alinea el elemento con el borde izquierdo de la ventana */
+        padding: 0 2rem; /* Espaciado horizontal si es necesario */
+        margin-bottom: 10rem;
+    
+        &::after {
+            content: ""; 
+            display: block;
+            margin:2rem;
+             /* Altura del elemento fijo para agregar espacio en el contenido principal */
+        }
+    
+    }
+   
  
 
     &__logo{

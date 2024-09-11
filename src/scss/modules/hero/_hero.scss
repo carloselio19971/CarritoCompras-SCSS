@@ -1,6 +1,7 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 .hero{
+    margin-top: 19rem;
     background-color: v.$primario; 
     padding-bottom: 5rem; 
     min-height: 30rem;
