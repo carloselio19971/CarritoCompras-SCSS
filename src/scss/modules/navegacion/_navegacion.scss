@@ -124,11 +124,12 @@
       
    }
    &__icono:hover{
+    
     .navegacion__carrito{
         position: absolute;
         background-color: v.$blanco;
-        width: 35rem;
-        height:35rem;
+        width: 100%;
+        height:auto;
         top: 100%;
         left: 0;
 
@@ -155,16 +156,19 @@
 
             table{
                 display: grid;
+                
                
                 thead, tbody    {
                     
                     border-bottom: 1px solid v.$negro;
                     margin-bottom: 2rem;
+
                     tr{
                         padding: 2rem;
                         display: flex;
                         justify-content: space-around;
                         align-items: center;
+                       
                         
 
                         @include m.tablet { 
